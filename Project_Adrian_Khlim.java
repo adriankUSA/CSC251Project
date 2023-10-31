@@ -54,7 +54,7 @@ public class Project_Adrian_Khlim
      System.out.println("Policyholder's Last Name: " + lastName);
      System.out.println("Policyholder's Age: " + age);
      System.out.println("Policyholder's Smoking Status: " + smokingStatus);
-     System.out.printf("Policyholder's Height: %.1f inches", heightInches);
+     System.out.printf("Policyholder's Height: %.1f inches", heightInches); //single decimal
      System.out.println(" ");
      System.out.printf("Policyholder's Weight: %.1f pounds", weightPounds);
      System.out.println(" ");
