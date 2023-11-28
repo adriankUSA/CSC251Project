@@ -7,16 +7,6 @@ public class PolicyHolder
    private double height;
    private double weight;
    
-   public PolicyHolder()
-   {
-      firstName = "";
-      lastName = "";
-      age = 0;
-      smokingStatus = "";
-      height = 0;
-      weight = 0;
-   }
-   
    /**
    Constructor that accepts arguments for each field
    @param fName The Policyholder's first name
@@ -34,6 +24,16 @@ public class PolicyHolder
       smokingStatus = sStatus;
       height = h;
       weight = w;
+   }
+   
+   public PolicyHolder(PolicyHolder policy)
+   {
+      firstName = policy.getFirstName();
+      lastName = policy.getLastName();
+      age = policy.getAge();
+      smokingStatus = policy.getSmokingStatus();
+      height = policy.getHeight();
+      weight = policy.getWeight();
    }
    
    /**

@@ -3,25 +3,17 @@ public class Policy
    private String policyNumber;
    private String providerName;
    private PolicyHolder policyholder;
-
-   /**
-   No-arg constructor that explicitly initializes all fields
-   */
-   public Policy()
-   {
-      policyNumber = "";
-      providerName = "";
-   }
    
    /**
    Constructor that accepts arguments for each field
    @param pNumber The Policy number
    @param pName The Policy Provider's Name
    */
-   public Policy(String pNumber, String pName)
+   public Policy(String pNumber, String pName, PolicyHolder policy)
    {
       policyNumber = pNumber;
       providerName = pName;
+      policyholder = new PolicyHolder(policy);//we use the copy contructor of the PolicyHolder class to avoid security holes
    }
    
    //getters//
@@ -40,6 +32,17 @@ public class Policy
    {
       return providerName;
    }
+   
+   /**
+   getTextBook method
+   @return - return a reference to a copy of this course's TextBook object
+   */
+
+   
+   public PolicyHolder getPolicyHolder()
+   {
+      return policyholder; 
+   }
       
    //setters//
    
@@ -57,6 +60,11 @@ public class Policy
    public void setProviderName(String pName)
    {
       providerName = pName;
+   }
+   
+   public void setPolicyHolder(PolicyHolder policy)
+   {
+      policyholder = new PolicyHolder(policy);
    }
          
    /**
