@@ -37,8 +37,8 @@ public class Policy
    }
    
    /**
-   getTextBook method
-   @return - return a reference to a copy of this course's TextBook object
+   getPolicyHolder method
+   @return - return a reference to a copy of this PolicyHolder object
    */
 
    
@@ -64,7 +64,9 @@ public class Policy
    {
       providerName = pName;
    }
-   
+   /**
+   @param policyholder The policy holder object
+   */
    public void setPolicyHolder(PolicyHolder policy)
    {
       policyholder = new PolicyHolder(policy);
