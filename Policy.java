@@ -216,6 +216,7 @@ public class Policy
          
       return price;
    }
+<<<<<<< Updated upstream
 
    //Not included in the instructions but can be added...
    /*Displays information about the Policy
@@ -233,4 +234,7 @@ public class Policy
       System.out.printf("Policy Price: $%.2f\n", getPrice());
    }
    */
+=======
+   
+>>>>>>> Stashed changes
 }
