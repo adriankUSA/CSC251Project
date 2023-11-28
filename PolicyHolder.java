@@ -1,7 +1,7 @@
 public class PolicyHolder
 { //fields
-   private String FirstName;
-   private String LastName;
+   private String firstName;
+   private String lastName;
    private int age;
    private String smokingStatus;
    private double height;
@@ -9,8 +9,8 @@ public class PolicyHolder
    
    public PolicyHolder()
    {
-      FirstName = "";
-      LastName = "";
+      firstName = "";
+      lastName = "";
       age = 0;
       smokingStatus = "";
       height = 0;
@@ -19,7 +19,7 @@ public class PolicyHolder
    
    /**
    Constructor that accepts arguments for each field
-   @param fName The Policyhodler's first name
+   @param fName The Policyholder's first name
    @param lName The Policyholder's last name
    @param a The Policyholder's age
    @param sStatus The Policyholder's smoking status
@@ -28,8 +28,8 @@ public class PolicyHolder
    */
    public PolicyHolder(String fName, String lName,int a, String sStatus, double h, double w)
    {
-      FirstName = fName;
-      LastName = lName;
+      firstName = fName;
+      lastName = lName;
       age = a;
       smokingStatus = sStatus;
       height = h;
@@ -41,7 +41,7 @@ public class PolicyHolder
    */
    public String getFirstName()
    {
-      return FirstName;
+      return firstName;
    }
    
    /**
@@ -49,7 +49,7 @@ public class PolicyHolder
    */
    public String getLastName()
    {
-      return LastName;
+      return lastName;
    }
    
    /**
@@ -90,7 +90,7 @@ public class PolicyHolder
    */
    public void setFirstName(String fName)
    {
-      FirstName = fName;
+      firstName = fName;
    }
    
    /**
@@ -98,7 +98,7 @@ public class PolicyHolder
    */
    public void setLastName(String lName)
    {
-      LastName = lName;
+      lastName = lName;
    }
    
    /**
@@ -144,5 +144,15 @@ public class PolicyHolder
       return (weight * CONVFACTOR) / (height * height);
    }
 
-
+   public String toString()
+   {
+      return String.format("Policyholder's First Name: " + firstName +
+      "\nPolicyholder's Last Name: " + lastName +
+      "\nPolicyholder's Age: " + age +
+      "\nPolicyholder's Smoking Status (Y/N): " + smokingStatus +
+      "\nPolicyholder's Height: " + height + " inches" +
+      "\nPolicyholder's Weight: " + weight + " pounds" +
+      "\nPolicyholder's BMI: %.2f\n", getBMI());
+   }
+      
 }
