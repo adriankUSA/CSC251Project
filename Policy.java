@@ -86,6 +86,13 @@ public class Policy
          
       return price;
    }
+   
+   public String toString()
+   {
+      return String.format("Policy Number: " + policyNumber +
+      "\nProvider Name: " + providerName +
+      "\nPolicy Price: $%.2f\n", getPrice());
+   }
 
    //Not included in the instructions but can be added...
    /*Displays information about the Policy
