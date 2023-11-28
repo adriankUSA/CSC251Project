@@ -14,7 +14,7 @@ public class PolicyHolder
    @param a The Policyholder's age
    @param sStatus The Policyholder's smoking status
    @param h The Policyholder's height
-   @param w The Policytholder's weight
+   @param w The Policyholder's weight
    */
    public PolicyHolder(String fName, String lName,int a, String sStatus, double h, double w)
    {
@@ -26,6 +26,7 @@ public class PolicyHolder
       weight = w;
    }
    
+   //copy constructor
    public PolicyHolder(PolicyHolder policy)
    {
       firstName = policy.getFirstName();

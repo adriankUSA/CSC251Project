@@ -4,6 +4,8 @@ public class Policy
    private String providerName;
    private PolicyHolder policyholder;
    
+   public static int numPolicy = 0;
+   
    /**
    Constructor that accepts arguments for each field
    @param pNumber The Policy number
@@ -14,6 +16,7 @@ public class Policy
       policyNumber = pNumber;
       providerName = pName;
       policyholder = new PolicyHolder(policy);//we use the copy contructor of the PolicyHolder class to avoid security holes
+      numPolicy++; //increment
    }
    
    //getters//
@@ -99,6 +102,7 @@ public class Policy
    {
       return String.format("Policy Number: " + policyNumber +
       "\nProvider Name: " + providerName +
+      policyholder.toString() +
       "\nPolicy Price: $%.2f\n", getPrice());
    }
 
